@@ -6,7 +6,7 @@
 /*   By: yadiaman <yadiaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 21:31:29 by yadiaman          #+#    #+#             */
-/*   Updated: 2024/04/09 21:51:00 by yadiaman         ###   ########.fr       */
+/*   Updated: 2024/04/10 13:22:35 by yadiaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int ft_isdigit(int c)
 int main(void)
 {
     char c = '1';
+    
     printf("%d", ft_isdigit(c));
     return (0);
 }
