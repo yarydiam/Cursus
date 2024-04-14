@@ -5,12 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yadiaman <yadiaman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/12 13:08:22 by yadiaman          #+#    #+#             */
-/*   Updated: 2024/04/12 14:05:22 by yadiaman         ###   ########.fr       */
+/*   Created: 2024/04/12 14:08:13 by yadiaman          #+#    #+#             */
+/*   Updated: 2024/04/14 15:20:20 by yadiaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t ft_strlen(const char *str);
+
+#include <stdio.h>
+
+size_t ft_strlen(const char *str)
 {
     size_t i;
 
@@ -22,3 +25,12 @@ size_t ft_strlen(const char *str);
     }
     return(i);   
 }
+
+
+/* int main()
+{
+    const char *cadena1 = "Que pasa tronco";
+
+    printf("Longitud de cadena1: %zu", ft_strlen(cadena1));
+}
+*/
