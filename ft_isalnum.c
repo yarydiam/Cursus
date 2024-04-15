@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalnum.c                                          :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yadiaman <yadiaman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yadiaman <yadiaman@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 11:42:36 by yadiaman          #+#    #+#             */
-/*   Updated: 2024/04/10 13:15:11 by yadiaman         ###   ########.fr       */
+/*   Created: 2024/04/15 18:47:55 by yadiaman          #+#    #+#             */
+/*   Updated: 2024/04/15 21:35:48 by yadiaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-        return(1);
-    else if ((c >= '0' && c <= '9'))
-        return(1);
-    else 
-        return(0);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	else if ((c >= '0' && c <= '9'))
+		return (1);
+	else
+		return (0);
 }
 
 /* #include <stdio.h>

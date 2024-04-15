@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yadiaman <yadiaman@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 18:46:39 by yadiaman          #+#    #+#             */
-/*   Updated: 2024/04/15 18:48:38 by yadiaman         ###   ########.fr       */
+/*   Created: 2024/04/15 20:04:09 by yadiaman          #+#    #+#             */
+/*   Updated: 2024/04/15 21:49:22 by yadiaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef LIBFT_H
+# define LIBFT_H
 
-int ft_isprint(int c)
-{
-    if ((c >= 32 && c <= 126))
-        return(1);
-    else
-        return(0);
-}
+# include <stdio.h>
+# include <unistd.h>
+# include <string.h>
 
-#include <stdio.h>
-int main(void)
-{
-    char c = 'z';
-    printf("%d", ft_isprint(c));
-    return(0);
-}
+int	ft_isalpha(int c);
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
+int	ft_isascii(int c);
+
+#endif

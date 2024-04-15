@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yadiaman <yadiaman@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yadiaman <yadiaman@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/14 16:55:48 by yadiaman          #+#    #+#             */
-/*   Updated: 2024/04/14 17:08:12 by yadiaman         ###   ########.fr       */
+/*   Created: 2024/04/15 18:46:20 by yadiaman          #+#    #+#             */
+/*   Updated: 2024/04/15 18:48:35 by yadiaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #include <stdio.h>
 
