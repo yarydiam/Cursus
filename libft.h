@@ -6,7 +6,7 @@
 /*   By: yadiaman <yadiaman@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 20:04:09 by yadiaman          #+#    #+#             */
-/*   Updated: 2024/04/15 21:49:22 by yadiaman         ###   ########.fr       */
+/*   Updated: 2024/04/20 00:09:36 by yadiaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,14 @@
 # include <unistd.h>
 # include <string.h>
 
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+size_t	ft_strlen(const char *str);
+void	*ft_memset(void *b, int c, size_t len);
+void	ft_bzero(void *str, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 #endif

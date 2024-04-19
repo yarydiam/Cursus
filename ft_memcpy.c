@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yadiaman <yadiaman@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 18:46:20 by yadiaman          #+#    #+#             */
-/*   Updated: 2024/04/19 19:50:12 by yadiaman         ###   ########.fr       */
+/*   Created: 2024/04/19 23:39:16 by yadiaman          #+#    #+#             */
+/*   Updated: 2024/04/20 00:09:34 by yadiaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	if (dst == NULL && src == NULL)
+		return (NULL);
+	while (i < n)
 	{
+		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
 		i++;
 	}
-	return (i);
+	return (dst);
 }
-
-/* int	main(void)
-{
-	const	char *cadena1 = "Que pasa tronco";
-
-	printf("Longitud de cadena1: %zu", ft_strlen(cadena1));
-} */

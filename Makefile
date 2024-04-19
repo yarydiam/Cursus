@@ -6,7 +6,7 @@
 #    By: yadiaman <yadiaman@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/15 19:51:55 by yadiaman          #+#    #+#              #
-#    Updated: 2024/04/15 21:47:26 by yadiaman         ###   ########.fr        #
+#    Updated: 2024/04/20 00:09:38 by yadiaman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,11 @@ ft_isalpha.c\
 ft_isalnum.c\
 ft_isdigit.c\
 ft_isascii.c\
-
+ft_isprint.c\
+ft_strlen.c\
+ft_memset.c\
+ft_bzero.c\
+ft_memcpy.c
 OBJS = $(SRC:.c=.o)
 all:  $(NAME)
 $(NAME):$(OBJS)
@@ -27,7 +31,7 @@ $(NAME):$(OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@
 clean:
 	rm -f $(OBJS)
-fclean:
+fclean: clean
 	rm -f $(NAME)
 re:	fclean all
 .PHONY: fclean clean all re
