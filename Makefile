@@ -6,7 +6,7 @@
 #    By: yadiaman <yadiaman@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/15 19:51:55 by yadiaman          #+#    #+#              #
-#    Updated: 2024/04/20 00:09:38 by yadiaman         ###   ########.fr        #
+#    Updated: 2024/04/24 13:09:54 by yadiaman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,9 @@ ft_isprint.c\
 ft_strlen.c\
 ft_memset.c\
 ft_bzero.c\
-ft_memcpy.c
+ft_memcpy.c\
+ft_memmove.c\
+ft_strlcpy.c
 OBJS = $(SRC:.c=.o)
 all:  $(NAME)
 $(NAME):$(OBJS)

@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yadiaman <yadiaman@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/14 15:24:52 by yadiaman          #+#    #+#             */
-/*   Updated: 2024/04/24 12:01:52 by yadiaman         ###   ########.fr       */
+/*   Created: 2024/04/24 12:14:59 by yadiaman          #+#    #+#             */
+/*   Updated: 2024/04/24 13:18:48 by yadiaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 
 	i = 0;
-	while (i < len)
+	if (dstsize == 0)
+		return (ft_strlen(src));
+	while (src[i] != '\0' && (i < dstsize - 1))
 	{
-		((char *)b)[i] = (unsigned char)c;
+		dst[i] = src[i];
 		i++;
 	}
-	return (b);
+	if (dstsize != 0)
+		dst[i] = '\0';
+	return (ft_strlen(src));
 }
-
-/*int main(void)
-{
-	char array[10];
-
-    ft_memset(array, 'A', sizeof(array));
-
-    for (int i = 0; i < sizeof(array); i++) 
-	{
-		printf("%c", array[i]);
-	}
-    printf("\n");
-
-    return (0);
-}*/
