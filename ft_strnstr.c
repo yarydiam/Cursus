@@ -1,20 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yadiaman <yadiaman@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/28 13:56:52 by yadiaman          #+#    #+#             */
-/*   Updated: 2024/04/30 23:28:03 by yadiaman         ###   ########.fr       */
+/*   Created: 2024/05/01 16:22:09 by yadiaman          #+#    #+#             */
+/*   Updated: 2024/05/01 21:49:49 by yadiaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
+	size_t	i;
+	size_t	needle_len;
+
+	if (*needle == '\0')
+		return ((char *)haystack);
+	needle_len = ft_strlen(needle);
+	while (*haystack && len >= needle_len)
+	{
+		i = 0;
+		while (haystack[i] == needle[i] && haystack[i] && needle[i])
+			i++;
+		if (i == needle_len)
+			return ((char *)haystack);
+		haystack++;
+		len--;
+	}
+	return (NULL);
 }

@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yadiaman <yadiaman@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/28 13:56:52 by yadiaman          #+#    #+#             */
-/*   Updated: 2024/04/30 23:28:03 by yadiaman         ###   ########.fr       */
+/*   Created: 2024/04/29 21:51:18 by yadiaman          #+#    #+#             */
+/*   Updated: 2024/04/30 23:36:44 by yadiaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_strchr(const char *str, int c)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
+	while ((*str != '\0') && (*str != (char)c))
+		str++;
+	if (*str == (char)c)
+		return ((char *)str);
+	return (NULL);
 }
