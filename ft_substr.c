@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yadiaman <yadiaman@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/10 11:36:20 by yadiaman          #+#    #+#             */
-/*   Updated: 2024/05/13 19:33:00 by yadiaman         ###   ########.fr       */
+/*   Created: 2024/05/13 20:46:33 by yadiaman          #+#    #+#             */
+/*   Updated: 2024/05/13 21:40:45 by yadiaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-char	*ft_strdup(const char *s1)
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	char	*cpy;
-	size_t	len;
 	size_t	i;
+	char	*str;
 
-	len = ft_strlen(s1);
-	cpy = (char *)malloc(sizeof(char) *(len + 1));
-	if (!cpy)
+	if (!s)
+		return (NULL);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
+	str = ft_calloc(len + 1, sizeof(char));
+	if (!str)
 		return (NULL);
 	i = 0;
 	while (i < len)
 	{
-		cpy[i] = s1[i];
+		str[i] = s[start + i];
 		i++;
 	}
-	cpy[len] = '\0';
-	return (cpy);
+	return (str);
 }
