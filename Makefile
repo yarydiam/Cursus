@@ -6,7 +6,7 @@
 #    By: yadiaman <yadiaman@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/15 19:51:55 by yadiaman          #+#    #+#              #
-#    Updated: 2024/05/13 21:37:29 by yadiaman         ###   ########.fr        #
+#    Updated: 2024/05/14 22:38:46 by yadiaman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,9 @@ ft_strnstr.c\
 ft_atoi.c\
 ft_calloc.c\
 ft_strdup.c\
-ft_substr.c
+ft_substr.c\
+ft_strjoin.c\
+ft_strjoin.c
 OBJS = $(SRC:.c=.o)
 all:  $(NAME)
 $(NAME):$(OBJS)
