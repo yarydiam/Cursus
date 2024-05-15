@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yadiaman <yadiaman@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/15 18:47:12 by yadiaman          #+#    #+#             */
-/*   Updated: 2024/05/15 22:19:31 by yadiaman         ###   ########.fr       */
+/*   Created: 2024/05/15 19:18:07 by yadiaman          #+#    #+#             */
+/*   Updated: 2024/05/15 22:30:47 by yadiaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int	ft_isdigit(int c)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	if ((c >= '0' && c <= '9'))
-		return (1);
-	return (0);
+	size_t	i;
+
+	if (!s1 || !set)
+		return (NULL);
+	while (ft_strchr(set, *s1) && *s1 != '\0')
+		s1++;
+	i = ft_strlen((char *)s1);
+	while (ft_strchr(set, s1[i]) && i != 0)
+		i--;
+	return (ft_substr((char *)s1, 0, i + 1));
 }
-
-/*
-int main(void)
-{
-    char c = '1';
-    printf("%d", ft_isdigit(c));
-    return (0);
-}*/
