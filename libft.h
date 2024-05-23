@@ -44,5 +44,5 @@ char	*ft_strdup(const char *s1);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(char const *s1, char const *set);
-static size_t ft_wordcount(char *s char c);
+char	**ft_split(char const *s, char c)
 #endif
