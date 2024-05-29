@@ -6,7 +6,7 @@
 /*   By: yadiaman <yadiaman@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 20:04:09 by yadiaman          #+#    #+#             */
-/*   Updated: 2024/05/15 22:32:30 by yadiaman         ###   ########.fr       */
+/*   Updated: 2024/05/29 11:34:10 by yadiaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdio.h>
 # include <unistd.h>
-# include <string.h>
+# include <stdlib.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
