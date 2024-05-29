@@ -6,43 +6,44 @@
 /*   By: yadiaman <yadiaman@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 13:28:37 by yadiaman          #+#    #+#             */
-/*   Updated: 2024/05/20 13:28:37 by yadiaman         ###   ########.fr       */
+/*   Updated: 2024/05/24 13:43:18 by yadiaman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t ft_wordcount(char *s char c)
+static size_t	ft_wordcount(char *s, char c)
 {
-    size_t count;
-    size_t i;
+	size_t	count;
+	size_t	i;
 
-    if(!s)
-        return(0);
-    if(!ft_stren(s))
-        return(0);
-    i = 0;
-    count = s[i] != c;
-    while s[i]
-    {
-        count += (s[i] == c && s[i + 1] != c && s[i + 1] != '\0');
-        i++;
-    }
-    return(count);
+	if (!s)
+		return (0);
+	if (!ft_strlen(s))
+		return (0);
+	i = 0;
+	count = s[i] != c;
+	while (s[i])
+	{
+		count += (s[i] == c && s[i + 1] != c && s[i + 1] != '\0');
+		i++;
+	}
+	return (count);
 }
 
-static int ft_next_worlen(char const *s, int i, char c)
+static int	ft_next_worlen(char const *s, int i, char c)
 {
-    int count;
-    count = 0;
-    while (s[i])
-    {
-        if(s[i] == c || s[i] == '\0')
-            return(count);
-        i++;
-        count++;
-    }
-    return(count);
+	int	count;
+
+	count = 0;
+	while (s[i])
+	{
+		if (s[i] == c || s[i] == '\0')
+			return (count);
+		i++;
+		count++;
+	}
+	return (count);
 }
 
 char	**ft_split(char const *s, char c)
